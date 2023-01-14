@@ -2,7 +2,7 @@
 
 class Character
 {
-    var string $weap,
+    var ?string $weap,
         $shield,
         $armor,
         $muffler,
