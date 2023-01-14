@@ -2,7 +2,8 @@
 
 class Character
 {
-    var ?string $weap,
+    var ?string
+        $weap,
         $shield,
         $armor,
         $muffler,
@@ -10,6 +11,13 @@ class Character
         $facc,
         $sacc,
         $talisman;
+    var int
+        $int = 0,
+        $str = 0,
+        $dex = 0,
+        $luck = 0,
+        $vit = 0,
+        $agi = 0;
 
     function HealthPoint(int $value): int
     {
@@ -41,5 +49,9 @@ class Character
                 return $base_level;
                 break;
         }
+    }
+    function baseStat(int $value)
+    {
+        echo "Base stat :" . $value + $this->int;
     }
 }
