@@ -2,6 +2,7 @@
 
 class Character
 {
+    const AUTHOR = "Muhammad Rizal Firdaus";
     var ?string
         $weap,
         $shield,
@@ -53,9 +54,9 @@ class Character
     function baseStat(?int $value)
     {
         if (is_null($value)) {
-            echo "Base stat :" . $this->int;
+            echo "Base stat :" . $this->int . PHP_EOL;
         } else {
-            echo "Base stat :" . $this->int + $value;
+            echo "Base stat :" . $this->int + $value . PHP_EOL;
         }
     }
 }

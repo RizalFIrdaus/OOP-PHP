@@ -28,3 +28,4 @@ echo "Health : " . $mage->HealthPoint(20000) . PHP_EOL;
 echo "Job Level : " . $mage->Job(200) . PHP_EOL;
 echo "Base Level : " . $mage->Base(200) . PHP_EOL;
 $mage->baseStat(13);
+echo "Author : " . $mage::AUTHOR . PHP_EOL;
