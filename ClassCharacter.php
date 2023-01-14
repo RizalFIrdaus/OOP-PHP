@@ -2,12 +2,12 @@
 
 class Character
 {
-    var $weap,
+    var string $weap,
         $shield,
         $armor,
         $muffler,
         $shoes,
-        $firstAcc,
-        $secondAcc,
+        $facc,
+        $sacc,
         $talisman;
 }

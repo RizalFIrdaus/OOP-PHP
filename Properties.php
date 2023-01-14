@@ -1,14 +1,14 @@
 <?php
 require_once "ClassCharacter.php";
 
-$mageOneHand = new Character();
-$mageOneHand->weap = "Staff";
-$mageOneHand->shield = "Shield";
-$mageOneHand->armor = "Armor";
-$mageOneHand->muffler = "Muffler";
-$mageOneHand->shoes = "Shoes";
-$mageOneHand->firstAcc = "Acc";
-$mageOneHand->secondAcc = "Acc";
-$mageOneHand->talisman = "Talisman";
+$mage = new Character();
+$mage->weap = "Staff";
+$mage->shield = "Shield";
+$mage->armor = "Armor";
+$mage->muffler = "Muffler";
+$mage->shoes = "Shoes";
+$mage->facc = "Acc";
+$mage->sacc = "Acc";
+$mage->talisman = "Talisman";
 
-var_dump($mageOneHand);
+var_dump($mage);
