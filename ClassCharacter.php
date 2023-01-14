@@ -12,12 +12,12 @@ class Character
         $sacc,
         $talisman;
     var int
-        $int = 0,
-        $str = 0,
-        $dex = 0,
-        $luck = 0,
-        $vit = 0,
-        $agi = 0;
+        $int,
+        $str,
+        $dex,
+        $luck,
+        $vit,
+        $agi;
 
     function HealthPoint(int $value): int
     {
@@ -50,8 +50,12 @@ class Character
                 break;
         }
     }
-    function baseStat(int $value)
+    function baseStat(?int $value)
     {
-        echo "Base stat :" . $value + $this->int;
+        if (is_null($value)) {
+            echo "Base stat :" . $this->int;
+        } else {
+            echo "Base stat :" . $this->int + $value;
+        }
     }
 }

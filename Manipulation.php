@@ -10,6 +10,7 @@ $mage->shoes = "Shoes";
 $mage->facc = "Acc";
 $mage->sacc = "Acc";
 $mage->talisman = "Talisman";
+$mage->int = 0;
 
 
 
@@ -26,4 +27,4 @@ echo "Talisman : $mage->talisman" . PHP_EOL;
 echo "Health : " . $mage->HealthPoint(20000) . PHP_EOL;
 echo "Job Level : " . $mage->Job(200) . PHP_EOL;
 echo "Base Level : " . $mage->Base(200) . PHP_EOL;
-$mage->BaseStat(200);
+$mage->baseStat(13);
