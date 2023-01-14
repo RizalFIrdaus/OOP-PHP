@@ -2,8 +2,7 @@
 
 class Character
 {
-    var $type,
-        $weap,
+    var $weap,
         $shield,
         $armor,
         $muffler,
