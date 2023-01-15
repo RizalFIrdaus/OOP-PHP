@@ -9,11 +9,21 @@ namespace Data\C1 {
             $this->a = $a;
             $this->b = $b;
         }
-
+    }
+    class Sum extends Conflict
+    {
         function sum(): float
         {
             $sum = $this->a + $this->b;
             return $sum;
+        }
+    }
+    class Multiple extends Conflict
+    {
+        function multiple(): float
+        {
+            $result = $this->a * $this->b;
+            return $result;
         }
     }
 }
