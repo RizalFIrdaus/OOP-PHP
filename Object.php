@@ -2,5 +2,5 @@
 require_once "ClassCharacter.php";
 
 $mage = new Character("Staff", "Shield");
-
-var_dump($mage);
+$mage_skill = new Mage("Two Hand", null);
+$mage_skill->skill();

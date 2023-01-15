@@ -1,5 +1,5 @@
 <?php
-
+require_once "Mage.php";
 class Character
 {
     const AUTHOR = "Muhammad Rizal Firdaus";
@@ -21,15 +21,15 @@ class Character
         $agi;
 
 
-    function __construct(string $weap, string $shield)
+    function __construct(string $weap, ?string $shield)
     {
         $this->weap = $weap;
         $this->shield = $shield;
     }
-    function __destruct()
-    {
-        echo "Object has been destroyed";
-    }
+    // function __destruct()
+    // {
+    //     echo "Object has been destroyed";
+    // }
     function HealthPoint(int $value): int
     {
         $hp = $value;
