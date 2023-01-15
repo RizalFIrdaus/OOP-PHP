@@ -20,6 +20,12 @@ class Character
         $vit,
         $agi;
 
+
+    function __construct(string $weap, string $shield)
+    {
+        $this->weap = $weap;
+        $this->shield = $shield;
+    }
     function HealthPoint(int $value): int
     {
         $hp = $value;
@@ -58,5 +64,11 @@ class Character
         } else {
             echo "Base stat :" . $this->int + $value . PHP_EOL;
         }
+    }
+
+    function info()
+    {
+        echo "Weapon : $this->weap" . PHP_EOL;
+        echo "Shield : $this->shield" . PHP_EOL;
     }
 }
