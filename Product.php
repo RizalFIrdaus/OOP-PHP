@@ -32,12 +32,24 @@ class Product
         }
         return $result;
     }
-    public function getPriceAfterDiscount(): float
+    protected function getPriceAfterDiscount(): float
     {
         return $this->discount();
     }
-    public function setDiscount(float $discount): float
+    protected function setDiscount(float $discount): float
     {
         return $this->discount = $discount;
+    }
+}
+
+class detailProduct extends Product
+{
+    public function setDis(float $dis): float
+    {
+        return $this->setDiscount($dis);
+    }
+    public function getPAD(): void
+    {
+        echo "Harga Discount : " . $this->getPriceAfterDiscount() . PHP_EOL;
     }
 }
