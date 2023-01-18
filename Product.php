@@ -14,14 +14,14 @@ class Product
         $this->price = $price;
     }
 
-    public function getName(): string
+    public function getName(): void
     {
-        return $this->name;
+        echo "Nama Produk : $this->name" . PHP_EOL;
     }
 
-    public function getPrice(): int
+    public function getPrice(): void
     {
-        return $this->price;
+        echo "Harga Produk : $this->price" . PHP_EOL;
     }
     private function discount(): float
     {
@@ -30,7 +30,6 @@ class Product
         } else {
             $result = $this->price;
         }
-
         return $result;
     }
     public function getPriceAfterDiscount(): float
