@@ -36,14 +36,20 @@ class FrontendProgrammer extends Programmer
 class Company
 {
     var Programmer $programmer;
-
-    public function hello(Programmer $programmer): void
-    {
-        echo $programmer;
-    }
 }
 
 function sayHello(Programmer $programmer): void
 {
-    echo "Hello Programmer $programmer->name" . PHP_EOL;
+    // $programmer instanceof FrontendProgrammer ?
+    //     $display =  "Hello Frontend Programmer $programmer->name" . PHP_EOL
+    //     : $display =  "Hello Backend Programmer $programmer->name" . PHP_EOL;
+    // echo $display;
+
+    if ($programmer instanceof BackendProgrammer) {
+        echo  "Hello Backend Programmer $programmer->name" . PHP_EOL;
+    } else if ($programmer instanceof FrontendProgrammer) {
+        echo  "Hello Frontend Programmer $programmer->name" . PHP_EOL;
+    } else {
+        echo  "Hello Programmer $programmer->name" . PHP_EOL;
+    }
 }
