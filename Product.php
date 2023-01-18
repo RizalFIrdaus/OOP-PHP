@@ -7,11 +7,13 @@ class Product
     private string $name;
     private int $price;
     private float $discount;
+    protected string $author;
 
-    public function __construct(string $name, int $price)
+    public function __construct(string $name, int $price, string $author)
     {
         $this->name = $name;
         $this->price = $price;
+        $this->author = $author;
     }
 
     public function getName(): void
@@ -40,10 +42,20 @@ class Product
     {
         return $this->discount = $discount;
     }
+    public function info(): void
+    {
+        echo "Nama Author Product : $this->author" . PHP_EOL;
+    }
 }
 
 class detailProduct extends Product
 {
+
+    public function info(): void
+    {
+        echo "Nama Author Detail Product : $this->author" . PHP_EOL;
+    }
+
     public function setDis(float $dis): float
     {
         return $this->setDiscount($dis);
