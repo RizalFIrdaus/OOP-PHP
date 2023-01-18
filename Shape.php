@@ -30,6 +30,11 @@ class Triangle extends Shape
 {
     private float $result;
 
+    public function __construct(int $a, int $t)
+    {
+        parent::__construct($a, $t);
+    }
+
     public function getCornerX(): void
     {
         echo "Corner X : " . parent::getCornerX() . PHP_EOL;
