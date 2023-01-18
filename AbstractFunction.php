@@ -22,3 +22,15 @@ class Cat extends Animal
         echo "$this->name is running";
     }
 }
+
+class Dog extends Animal
+{
+    public function __construct(string $name)
+    {
+        $this->name = $name;
+    }
+    public function run(): void
+    {
+        echo "$this->name is running";
+    }
+}
