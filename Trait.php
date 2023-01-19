@@ -57,7 +57,10 @@ function child
 
 class Programmer
 {
-    use PersonalData, Carrer, Data, Getter, Setter;
+    use PersonalData, Carrer, Data, Getter, Setter {
+        // Visibility bisa di override juga
+        // Greeting as private;
+    }
 
     public function getAge(): void
     {
