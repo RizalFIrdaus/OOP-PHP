@@ -1,5 +1,9 @@
 <?php
 
+/*
+Keyword final digunakan untuk menandakan bahwa
+class tersebut tidak bisa diwariskan atau di lakukan inheritance
+*/
 
 trait Data
 {
