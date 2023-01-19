@@ -42,6 +42,19 @@ trait Setter
     protected abstract function setName(string $name);
 }
 
+class ParentProgrammer
+{
+    public function upCarrer(): void
+    {
+        echo  "You has been promoted in class ParentProgrammer" . PHP_EOL;
+    }
+}
+/*
+Trait adalah peran tengah jika melakukakn overide tergantung function yang dioverride ada dimana,
+jika function ada di parent, trait akan mengoverride parent, kalo ada di child justru trait yang akan di override oleh 
+function child
+*/
+
 class Programmer
 {
     use PersonalData, Carrer, Data, Getter, Setter;
@@ -61,5 +74,10 @@ class Programmer
     public function setName(string $name)
     {
         $this->name = $name;
+    }
+    // ini akan di mengoverride trait jika function ini ada di trait, tapi jika function yang dioverriode ada di parent akan mengoverride parent  
+    public function upCarrer(): void
+    {
+        echo  "You has been promoted in class programmer" . PHP_EOL;
     }
 }
