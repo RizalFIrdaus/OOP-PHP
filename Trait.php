@@ -39,6 +39,7 @@ trait Getter
 trait Setter
 {
     protected abstract function setAge(int $age);
+    protected abstract function setName(string $name);
 }
 
 class Programmer
@@ -56,5 +57,9 @@ class Programmer
     public function setAge(int $age)
     {
         $this->age = $age;
+    }
+    public function setName(string $name)
+    {
+        $this->name = $name;
     }
 }
