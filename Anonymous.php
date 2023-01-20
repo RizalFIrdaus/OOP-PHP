@@ -42,6 +42,7 @@ interface Hello
 
 $hello = new class implements Hello
 {
+
     public function HelloWorld(): void
     {
         echo "Hello World" . PHP_EOL;
@@ -49,3 +50,22 @@ $hello = new class implements Hello
 };
 
 $hello->HelloWorld();
+
+
+$name =  new class("Cihuahua")
+{
+    public string $name;
+
+    public function __construct(string $name)
+    {
+        $this->name = $name;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+};
+
+echo $name->name . PHP_EOL;
+echo $name->getName() . PHP_EOL;
