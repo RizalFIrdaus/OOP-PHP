@@ -24,6 +24,7 @@ interface Setter
     public function setAddress(string $address);
 }
 
+
 class Student implements Setter
 {
     use Data;
@@ -39,5 +40,10 @@ class Student implements Setter
     public function setAddress(string $address)
     {
         $this->address = $address;
+    }
+    // Convert to string
+    public function __toString(): string
+    {
+        return "Hello, my name is $this->name, iam $this->age years old and iam lived in $this->address";
     }
 }
