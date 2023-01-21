@@ -37,14 +37,30 @@ $gen = new class implements getData
             }
         }
     }
+
+    public function oddEven(int $max): Iterator
+    {
+        for ($i = 1; $i < $max; $i++) {
+            if ($i % 2 == 0) {
+                yield $i => "Even";
+            } else {
+                yield $i => "Odd";
+            }
+        }
+    }
 };
 
 // Instansiasi Object
 $ganjil = $gen->getGanjil(100);
 $genap = $gen->getGenap(100);
-foreach ($ganjil as $data) {
-    echo "Ganjil : $data" . PHP_EOL;
-}
-foreach ($genap as $data) {
-    echo "Genap : $data" . PHP_EOL;
+$clone = clone $ganjil;
+// foreach ($ganjil as $data) {
+//     echo "Ganjil : $data" . PHP_EOL;
+// }
+// foreach ($genap as $data) {
+//     echo "Genap : $data" . PHP_EOL;
+// }
+$oddeven = $gen->oddEven(100);
+foreach ($oddeven as $property => $value) {
+    echo "$property -> $value" . PHP_EOL;
 }
