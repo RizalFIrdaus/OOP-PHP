@@ -58,4 +58,15 @@ class Student implements Setter
         $data = implode(" - ", $num);
         echo $data;
     }
+
+    // Function untuk override vardump
+    public function __debugInfo(): array
+    {
+        return [
+            "Author" => "Rizal",
+            "name" => $this->name,
+            "age" => $this->age,
+            "address" => $this->address
+        ];
+    }
 }
