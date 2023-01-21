@@ -35,6 +35,24 @@ class Kosong
     {
         return $this->properties;
     }
+
+    // Function Overloading
+
+    public function __call($name, $arguments)
+    {
+        $imp = implode(",", $arguments);
+        echo "Overload Function name $name with arguments : $imp" . PHP_EOL;
+    }
+    public static function __callStatic($name, $arguments)
+    {
+        $result = 0;
+        foreach ($arguments as $argue) {
+            $result += $argue;
+        }
+        $imp = implode(",", $arguments);
+        echo "Overload Static Function name $name with arguments : $imp" . PHP_EOL;
+        return $result;
+    }
 }
 
 $kosong = new Kosong();
@@ -42,5 +60,5 @@ $kosong->name = "Rizal";
 $kosong->age = 22;
 $kosong->address = "Cibitung";
 $kosong->title = "Skom";
-
-echo $kosong->address;
+$kosong->getData("Rizal", 22, "Cibitung");
+echo $kosong::sum(1, 2, 3, 4, 5);
