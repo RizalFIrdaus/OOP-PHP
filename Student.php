@@ -41,9 +41,21 @@ class Student implements Setter
     {
         $this->address = $address;
     }
+
+    /*
+    MAGIC FUNCTION
+    */
+
     // Convert to string
     public function __toString(): string
     {
-        return "Hello, my name is $this->name, iam $this->age years old and iam lived in $this->address";
+        return "Hello, my name is $this->name, iam $this->age years old and iam lived in $this->address" . PHP_EOL;
+    }
+    // Function instance object
+    // Kalo mengakses object dengan memanggil seperti function maka function invoke akan di eksekusi
+    public function __invoke(...$num)
+    {
+        $data = implode(" - ", $num);
+        echo $data;
     }
 }
