@@ -2,6 +2,7 @@
 
 
 require_once "Animals.php";
+require_once "Food.php";
 
 
 interface Stray

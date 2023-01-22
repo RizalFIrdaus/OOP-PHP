@@ -1,5 +1,7 @@
 <?php
 
+require_once "Food.php";
+
 abstract class Animals
 {
     public string $name;
@@ -11,21 +13,21 @@ class Cat extends Animals
 {
     public function run(): void
     {
-        echo "$this->name is running!";
+        echo "$this->name is running!" . PHP_EOL;
     }
     public function eat(AnimalFood $food): void
     {
-        echo "$food";
+        echo "$this->name is eating" . PHP_EOL;
     }
 }
 class Dog extends Animals
 {
     public function run(): void
     {
-        echo "$this->name is running!";
+        echo "$this->name is running!" . PHP_EOL;
     }
     public function eat(Food $food): void
     {
-        echo "$food";
+        echo "$this->name is eating" . PHP_EOL;
     }
 }
