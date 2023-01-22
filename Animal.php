@@ -57,3 +57,27 @@ class Cat implements Animal, Sound
         echo "Hello, my food is $this->food" . PHP_EOL;
     }
 }
+
+class Dog implements Animal, Sound
+{
+    private string $name;
+    private string $food;
+
+    public function Sound(): void
+    {
+        echo "Guk Guk....!" . PHP_EOL;
+    }
+
+    public function isHealt(): bool
+    {
+        return true;
+    }
+    public function run(): void
+    {
+        echo "$this->name is running" . PHP_EOL;
+    }
+    public function food(): void
+    {
+        echo "$this->name eats $this->food" . PHP_EOL;
+    }
+}
