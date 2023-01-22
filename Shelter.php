@@ -14,7 +14,17 @@ class CatShelter implements Stray
     public function adopt(string $name): Cat
     {
         $cat = new Cat();
-        $cat->name = "Meow";
+        $cat->name = $name;
         return $cat;
+    }
+}
+
+class DogShelter implements Stray
+{
+    public function adopt(string $name): Dog
+    {
+        $dog = new Dog();
+        $dog->name = $name;
+        return $dog;
     }
 }

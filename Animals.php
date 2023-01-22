@@ -10,13 +10,13 @@ class Cat extends Animals
 {
     public function run(): void
     {
-        echo "Meow is running!";
+        echo "$this->name is running!";
     }
 }
 class Dog extends Animals
 {
     public function run(): void
     {
-        echo "Doggy is running!";
+        echo "$this->name is running!";
     }
 }
